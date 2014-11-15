@@ -1,0 +1,148 @@
+<html>
+<head>
+	<title>Knit like me</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+	<!--<script type="text/javascript" src="p5.js"></script>-->
+
+	<script type="text/javascript">
+		function init() {
+
+			function draw() {
+				//draw needles
+				var n0_canvas = document.getElementById("n0");
+				var n0_context = n0_canvas.getContext("2d");
+				n0_context.fillRect(0, 0, 8, 150);
+
+				var n3_canvas = document.getElementById("n3");
+				var n3_context = n3_canvas.getContext("2d");
+				n3_context.fillRect(0, 0, 13, 150);
+
+				var n6_canvas = document.getElementById("n6");
+				var n6_context = n6_canvas.getContext("2d");
+				n6_context.fillRect(0, 0, 17, 150);
+				
+				var n9_canvas = document.getElementById("n9");
+				var n9_context = n9_canvas.getContext("2d");
+				n9_context.fillRect(0, 0, 23, 150);	
+
+				var n13_canvas = document.getElementById("n13");
+				var n13_context = n13_canvas.getContext("2d");
+				n13_context.fillRect(0, 0, 37, 150);
+
+				var n17_canvas = document.getElementById("n17");
+				var n17_context = n17_canvas.getContext("2d");
+				n17_context.fillRect(0, 0, 51, 150);	
+
+				//draw yarn
+				var y2_canvas = document.getElementById("y2");
+				var y2_context = y2_canvas.getContext("2d");
+				y2_context.fillRect(0, 0, 5, 150);
+
+				var y4_canvas = document.getElementById("y4");
+				var y4_context = y4_canvas.getContext("2d");
+				y4_context.fillRect(0, 0, 9, 150);
+
+				var y5_canvas = document.getElementById("y5");
+				var y5_context = y5_canvas.getContext("2d");
+				y5_context.fillRect(0, 0, 12, 150);
+
+				var y8_canvas = document.getElementById("y8");
+				var y8_context = y8_canvas.getContext("2d");
+				y8_context.fillRect(0, 0, 18, 150);
+
+				var y10_canvas = document.getElementById("y10");
+				var y10_context = y10_canvas.getContext("2d");
+				y10_context.fillRect(0, 0, 24, 150);
+
+				var y12_canvas = document.getElementById("y12");
+				var y12_context = y12_canvas.getContext("2d");
+				y12_context.fillRect(0, 0, 28, 150);
+
+			}
+
+			draw();
+
+
+		}
+
+		window.addEventListener('load', init);
+	</script>
+
+</head>
+<body>
+<div id="wrapper">
+	<header>
+		<h1>Knit like me.</h1>
+	</header>
+	<div class="content">
+		
+		<p>To start knitting, choose your implements.</p>
+
+		<div class="menu" id="needles">
+			<h2>Needles:</h2>
+			<ul id="needle_list">
+				<li>
+					<canvas id="n0" width="8px" height="150px"></canvas>
+					<br/>0<br/>2mm
+				</li>
+				<li>
+					<canvas id="n3" width="13px" height="150px"></canvas>
+					<br/>3<br/>3.25mm
+				</li>
+				<li>
+					<canvas id="n6" width="17px" height="150px"></canvas>
+					<br/>6<br/>4mm
+				</li>
+				<li>
+					<canvas id="n9" width="23px" height="150px"></canvas>
+					<br/>9<br/>5.5mm
+				</li>
+				<li>
+					<canvas id="n13" width="37px" height="150px"></canvas>
+					<br/>13<br/>9mm
+				</li>
+				<li>
+					<canvas id="n17" width="51px" height="150px"></canvas>
+					<br/>17<br/>12mm
+				</li>
+			</ul>
+		</div><!--close needle menu-->
+		
+		<div class="menu" id="yarn">
+			<h2>Yarn:</h2>
+			<ul id="yarn_list">
+				<li>
+					<canvas id="y2" width="5px" height="150px"></canvas>
+					<br/>Lace<br/>2ply
+				</li>
+				<li>
+					<canvas id="y4" width="9px" height="150px"></canvas>
+					<br/>Fingering<br/>4ply
+				</li>
+				<li>
+					<canvas id="y5" width="12px" height="150px"></canvas>
+				</br>Sport<br/>5ply
+				</li>
+				<li>
+					<canvas id="y8" width="18px" height="150px"></canvas>
+					<br/>DK<br/>8ply
+				</li>
+				<li>
+					<canvas id="y10" width="24px" height="150px"></canvas>
+					<br/>Worsted<br/>10ply
+				</li>
+				<li>
+					<canvas id="y12" width="28px" height="150px"></canvas>
+					<br/>Bulky<br/>12ply
+				</li>
+			</ul>
+		</div><!--close yarn menu-->
+
+	</div><!--close content-->
+
+
+</div><!--close wrapper-->
+
+</body>
+</html>
