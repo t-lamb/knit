@@ -87,17 +87,16 @@ h2 {
 
 }
 header {
-
+	padding-top: 1rem;
 }
 .content {
 	margin: 0 auto;
 	width: 80%;
-	padding: 1rem 0;
 }
 .menu{
 	margin: 0 auto;
 	width: 100%;
-	padding: 1rem 0;
+	padding: 1rem 0 0 0;
 	float: left;
 }
 li{
