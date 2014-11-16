@@ -102,11 +102,12 @@ header {
 li{
 	float:left;
 	display:block;
-	padding: 4%;
+	width: 16%;
 }
 svg { 
 	padding: 0;
 	margin: 0;
+	height: 150 px;
 }
 
 
@@ -115,5 +116,10 @@ svg {
 @media screen and (min-width: 800px){
 	h1{
 		font-size: 4rem;
+	}
+}
+@media screen and (max-width: 600px){
+	p{
+		font-size: .08rem;
 	}
 }
