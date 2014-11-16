@@ -3,20 +3,28 @@
 	<title>Knit like me</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
-	<!--<script type="text/javascript" src="p5.js"></script>-->
+	<script type="text/javascript" src="p5.js"></script>
+	<script type="text/javascript" src="p5.dom.js"></script>
 
 	<script type="text/javascript">
 		function init() {
-
-			var needles = document.getElementsByClassName('needle');
+			var canvases = document.getElementsByClassName('needle');
+			//var needles = document.getElementsByClassName('needle');
 			var yarns = document.getElementsByClassName('yarn');
 
+			function setup(){
+				for (var i = 0; i<canvases.length; i++){
+					canvas = createCanvas(20, 150);	
+				}
+
+			}
 			function draw() {
 				//draw needles
-				for(var i = 0; i < needles.length; i++) {
-					var needle_context = needles[i].getContext("2d");
-					needle_context.fillRect(0, 0, needles[i].width, 150);
-				}
+				// for(var i = 0; i < needles.length; i++) {
+				// 	var needle_context = needles[i].getContext("2d");
+				// 	needle_context.fillRect(0, 0, needles[i].width, 150);
+				// }
+				rect(0, 0, 20, 150);
 
 				//draw yarn
 				for(var i = 0; i < yarns.length; i++) {
@@ -65,28 +73,28 @@
 		<div class="menu">
 			<h2>Needles:</h2>
 			<ul id="needle_list">
-				<li>
-					<canvas class="needle" width="8px" height="150px"></canvas>
+				<li class="needle">
+					<!--<canvas class="needle" width="8px" height="150px"></canvas>-->
 					<br/>0<br/>2mm
 				</li>
-				<li>
-					<canvas class="needle" width="13px" height="150px"></canvas>
+				<li class="needle">
+					<!--<canvas class="needle" width="13px" height="150px"></canvas>-->
 					<br/>3<br/>3.25mm
 				</li>
-				<li>
-					<canvas class="needle" width="17px" height="150px"></canvas>
+				<li class="needle">
+					<!--<canvas class="needle" width="17px" height="150px"></canvas>-->
 					<br/>6<br/>4mm
 				</li>
-				<li>
-					<canvas class="needle" width="23px" height="150px"></canvas>
+				<li class="needle">
+					<!--<canvas class="needle" width="23px" height="150px"></canvas>-->
 					<br/>9<br/>5.5mm
 				</li>
-				<li>
-					<canvas class="needle" width="37px" height="150px"></canvas>
+				<li class="needle">
+					<!--<canvas class="needle" width="37px" height="150px"></canvas>-->
 					<br/>13<br/>9mm
 				</li>
-				<li>
-					<canvas class="needle" width="51px" height="150px"></canvas>
+				<li class="needle">
+					<!--<canvas class="needle" width="51px" height="150px"></canvas>-->
 					<br/>17<br/>12mm
 				</li>
 			</ul>
