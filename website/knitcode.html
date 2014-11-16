@@ -4,54 +4,54 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="p5.js"></script>
-	<script type="text/javascript" src="p5.dom.js"></script>
+	<!--<script type="text/javascript" src="p5.dom.js"></script>-->
 
 	<script type="text/javascript">
 		function init() {
-			var canvases = document.getElementsByClassName('needle');
-			//var needles = document.getElementsByClassName('needle');
-			var yarns = document.getElementsByClassName('yarn');
+			// var canvases = document.getElementsByClassName('needle');
+			// //var needles = document.getElementsByClassName('needle');
+			// var yarns = document.getElementsByClassName('yarn');
 
-			function setup(){
-				for (var i = 0; i<canvases.length; i++){
-					canvas = createCanvas(20, 150);	
-				}
+			// function setup(){
+			// 	for (var i = 0; i<canvases.length; i++){
+			// 		canvas = createCanvas(20, 150);	
+			// 	}
 
-			}
-			function draw() {
-				//draw needles
-				// for(var i = 0; i < needles.length; i++) {
-				// 	var needle_context = needles[i].getContext("2d");
-				// 	needle_context.fillRect(0, 0, needles[i].width, 150);
-				// }
-				rect(0, 0, 20, 150);
+			// }
+			// function draw() {
+			// 	//draw needles
+			// 	// for(var i = 0; i < needles.length; i++) {
+			// 	// 	var needle_context = needles[i].getContext("2d");
+			// 	// 	needle_context.fillRect(0, 0, needles[i].width, 150);
+			// 	// }
+			// 	rect(0, 0, 20, 150);
 
-				//draw yarn
-				for(var i = 0; i < yarns.length; i++) {
-					var yarn_context = yarns[i].getContext("2d");
-					yarn_context.fillRect(0, 0, yarns[i].width, 150);
-				}
-			}
+			// 	//draw yarn
+			// 	for(var i = 0; i < yarns.length; i++) {
+			// 		var yarn_context = yarns[i].getContext("2d");
+			// 		yarn_context.fillRect(0, 0, yarns[i].width, 150);
+			// 	}
+			// }
 
-			draw();
+			// draw();
 
-			//add event listeners to needles for interaction
-			for(var i = 0; i < needles.length; i++) {
-				needles[i].addEventListener('mouseover', needleHover);
-				needles[i].addEventListener('mouseout', needleHoverOff);
-				needles[i].addEventListener('click', needleSelect);
-			}
+			// //add event listeners to needles for interaction
+			// for(var i = 0; i < needles.length; i++) {
+			// 	needles[i].addEventListener('mouseover', needleHover);
+			// 	needles[i].addEventListener('mouseout', needleHoverOff);
+			// 	needles[i].addEventListener('click', needleSelect);
+			// }
 
-			//add event listeners to yarns for interaction
-			for(var i = 0; i < yarns.length; i++) {
-				yarns[i].addEventListener('mouseover', yarnHover);
-				yarns[i].addEventListener('mouseout', yarnHoverOff);
-				yarns[i].addEventListener('click', yarnSelect);
-			}
+			// //add event listeners to yarns for interaction
+			// for(var i = 0; i < yarns.length; i++) {
+			// 	yarns[i].addEventListener('mouseover', yarnHover);
+			// 	yarns[i].addEventListener('mouseout', yarnHoverOff);
+			// 	yarns[i].addEventListener('click', yarnSelect);
+			// }
 
-			function needleHover {
+			// function needleHover {
 
-			};
+			// };
 
 
 
@@ -74,28 +74,34 @@
 			<h2>Needles:</h2>
 			<ul id="needle_list">
 				<li class="needle">
-					<!--<canvas class="needle" width="8px" height="150px"></canvas>-->
-					<br/>0<br/>2mm
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						 width="40px" height="200px" viewBox="0 -25 40 200" enable-background="new 0 -25 40 200" xml:space="preserve">
+					<g>
+						<path d="M20,175c7.5,0,20-50,20-50H0C0,125,12.5,175,20,175z"/>
+						<rect y="-25" width="40" height="150"/>
+					</g>
+					</svg>
+					<br/>0<br/>2mm<!--8px-->
 				</li>
 				<li class="needle">
-					<!--<canvas class="needle" width="13px" height="150px"></canvas>-->
-					<br/>3<br/>3.25mm
+					<svg version="1.1" id="Layer_1" x="0px" y="0px"
+						 width="20px" height="200px" viewBox="0 0 20 200" > 
+						<path d="M20,175c7.5,0,20-50,20-50H0C0,125,12.5,175,20,175z"/>
+						<rect y="-25" width="40" height="150"/>
+					</svg>
+					<br/>3<br/>3.25mm<!--13px-->
 				</li>
 				<li class="needle">
-					<!--<canvas class="needle" width="17px" height="150px"></canvas>-->
-					<br/>6<br/>4mm
+					<br/>6<br/>4mm<!--17px-->
 				</li>
 				<li class="needle">
-					<!--<canvas class="needle" width="23px" height="150px"></canvas>-->
-					<br/>9<br/>5.5mm
+					<br/>9<br/>5.5mm<!--23px-->
 				</li>
 				<li class="needle">
-					<!--<canvas class="needle" width="37px" height="150px"></canvas>-->
-					<br/>13<br/>9mm
+					<br/>13<br/>9mm<!--37px-->
 				</li>
 				<li class="needle">
-					<!--<canvas class="needle" width="51px" height="150px"></canvas>-->
-					<br/>17<br/>12mm
+					<br/>17<br/>12mm<!--51px-->
 				</li>
 			</ul>
 		</div><!--close needle menu-->
@@ -104,28 +110,22 @@
 			<h2>Yarn:</h2>
 			<ul id="yarn_list">
 				<li>
-					<canvas class="yarn" width="5px" height="150px"></canvas>
-					<br/>Lace<br/>2ply
+					<br/>Lace<br/>2ply<!--5px-->
 				</li>
 				<li>
-					<canvas class="yarn" width="9px" height="150px"></canvas>
-					<br/>Fingering<br/>4ply
+					<br/>Fingering<br/>4ply<!--9px-->
 				</li>
 				<li>
-					<canvas class="yarn" width="12px" height="150px"></canvas>
-					</br>Sport<br/>5ply
+					</br>Sport<br/>5ply<!--12px-->
 				</li>
 				<li>
-					<canvas class="yarn" width="18px" height="150px"></canvas>
-					<br/>DK<br/>8ply
+					<br/>DK<br/>8ply<!--18px-->
 				</li>
 				<li>
-					<canvas class="yarn" width="24px" height="150px"></canvas>
-					<br/>Worsted<br/>10ply
+					<br/>Worsted<br/>10ply<!--24px-->
 				</li>
 				<li>
-					<canvas class="yarn" width="28px" height="150px"></canvas>
-					<br/>Bulky<br/>12ply
+					<br/>Bulky<br/>12ply<!--28px-->
 				</li>
 			</ul>
 		</div><!--close yarn menu-->
