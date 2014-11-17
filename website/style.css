@@ -52,7 +52,6 @@ table {
 /* General button style (reset) */
 button {
 	border: none;
-	font: inherit;
 	color: inherit;
 	background: none;
 	cursor: pointer;
@@ -82,7 +81,10 @@ h2 {
 	font-family: Monoxil, monospace;
 	font-size: 1.5rem;
 }
-
+button {
+	font-family: Monoxil, monospace;
+	font-size: 1.5rem;
+}
 
 /* ---------------- COLOR ---------------*/
 body { 
@@ -114,6 +116,7 @@ svg {
 }
 button {
 	background-color: #cc33ff;
+	color: #ffffff;
 }
 button:hover {
 	background-color: #ff66ff;
