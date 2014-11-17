@@ -50,7 +50,7 @@ table {
 	border-spacing: 0;
 }
 /* General button style (reset) */
-button {
+#button {
 	border: none;
 	color: inherit;
 	background: none;
@@ -81,7 +81,7 @@ h2 {
 	font-family: Monoxil, monospace;
 	font-size: 1.5rem;
 }
-button {
+#button {
 	font-family: Monoxil, monospace;
 	font-size: 1.5rem;
 }
@@ -109,17 +109,17 @@ svg {
 	color: #66dd66;
 }
 .yarn:hover > svg {
-	fill: #ff99ff;
+	fill: #efaaff;
 }
 .yarn:hover > p {
-	color: #ff6666;
+	color: #ff33cc;
 }
-button {
+#button {
 	background-color: #cc33ff;
 	color: #ffffff;
 }
-button:hover {
-	background-color: #ff66ff;
+#button:hover {
+	background-color: #ff6666;
 }
 
 
@@ -153,7 +153,7 @@ svg {
 	margin: 0;
 	height: 150 px;
 }
-button {
+#button {
 	padding: 1.5rem 3rem;
 	margin: 1.5rem 0 2.5rem 0;
 }

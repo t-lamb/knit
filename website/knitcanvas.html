@@ -1,0 +1,49 @@
+<html>
+<head>
+	<title>Knit like me</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="p5.js"></script>
+	<script type="text/javascript" src="knitscript.js"></script>
+	<script type="text/javascript">
+
+
+		var s;
+
+		function setup(){
+			createCanvas(800, 600);
+			s = new Needle();
+			console.log(nWidth, yWidth);
+		}
+
+		function draw() {
+			s.k();
+			s.move();		
+		}
+
+		//needle class
+		function Needle(){
+			this.xLoc = 20;
+			this.yLoc = 20;
+
+		  this.k = function() {
+		    noFill();
+		    stroke(0, 0 ,255);
+		    strokeWeight(yWidth); 
+		    ellipse(this.xLoc, this.yLoc, nWidth, nWidth);
+		  }
+
+		  this.move = function() {
+		  	this.xLoc += 10;
+
+		  }
+		}
+
+	</script>
+
+</head>
+<body>
+
+
+</body>
+</html>
