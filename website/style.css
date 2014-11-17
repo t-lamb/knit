@@ -49,6 +49,20 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+/* General button style (reset) */
+button {
+	border: none;
+	font: inherit;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	display: inline-block;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
 
 /* ---------------- TYPOGRAPHY ---------------*/
 @font-face {
@@ -72,10 +86,37 @@ h2 {
 
 /* ---------------- COLOR ---------------*/
 body { 
-	color: #625793;
+	color: #242424;
+}
+h1 {
+	color: #cc33ff;
 }
 h2 {
-	color: #55e5fd;
+	color: #9933ff;
+}
+.menu p { 
+	color: #0066ff;
+}
+svg {
+	fill: #33ccff;
+}
+.needle:hover > svg {
+	fill: #e9fca3;
+}
+.needle:hover > p {
+	color: #66dd66;
+}
+.yarn:hover > svg {
+	fill: #ff99ff;
+}
+.yarn:hover > p {
+	color: #ff6666;
+}
+button {
+	background-color: #cc33ff;
+}
+button:hover {
+	background-color: #ff66ff;
 }
 
 
@@ -96,20 +137,23 @@ header {
 .menu{
 	margin: 0 auto;
 	width: 100%;
-	padding: 1rem 0 0 0;
+	padding: 1rem 0;
 	float: left;
 }
 li{
 	float:left;
 	display:block;
-	width: 16%;
+	width: 16.6666666666%;
 }
 svg { 
-	padding: 0;
+	padding: 1rem 0 .5rem 0;
 	margin: 0;
 	height: 150 px;
 }
-
+button {
+	padding: 1.5rem 3rem;
+	margin: 1.5rem 0 2.5rem 0;
+}
 
 /* ---------------- Media queries ---------------*/
 
@@ -119,7 +163,10 @@ svg {
 	}
 }
 @media screen and (max-width: 600px){
-	p{
-		font-size: .08rem;
+	.content{
+		width:90%;
+	}
+	li{
+		font-size: .9rem;
 	}
 }
