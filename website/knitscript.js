@@ -1,5 +1,5 @@
-var yWidth = 5;
-var nWidth = 16;
+var yWidth = 0;
+var nWidth = 0;
 
 function init() {
 	var needles = document.getElementsByClassName('needle');
@@ -56,17 +56,6 @@ function init() {
 	 	setup();
 	 	draw();
 	}
-
-	// 	function setup(){
-	// 		console.log("setup");
-	// 		createCanvas(600, 400);
-	// 	}
-
-	// 	function draw() {
-	// 		ellipse (50, 50, 80, 80);
-			
-	// 	}
-	// };
 
 };
 

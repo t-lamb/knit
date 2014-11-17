@@ -122,6 +122,24 @@ svg {
 	background-color: #ff6666;
 }
 
+#red {
+	fill: #ff6666;
+}
+#yellow {
+	fill: #e9fca3;
+}
+#green {
+	fill: #66dd66;
+}
+#blue {
+	fill: #33ccff;
+}
+#purple {
+	fill: #cc33ff;
+}
+#black {
+	fill: #444444;
+}
 
 /* ---------------- LAYOUT ---------------*/
 .wrapper{ 
@@ -147,11 +165,15 @@ li{
 	float:left;
 	display:block;
 	width: 16.6666666666%;
+	padding: 0 0 1rem 0;
 }
 svg { 
 	padding: 1rem 0 .5rem 0;
 	margin: 0;
-	height: 150 px;
+	height: 150px;
+}
+.color svg {
+	width: 94%;
 }
 #button {
 	padding: 1.5rem 3rem;
