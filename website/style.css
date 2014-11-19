@@ -122,24 +122,7 @@ svg {
 	background-color: #ff6666;
 }
 
-#red {
-	fill: #ff6666;
-}
-#yellow {
-	fill: #e9fca3;
-}
-#green {
-	fill: #66dd66;
-}
-#blue {
-	fill: #33ccff;
-}
-#purple {
-	fill: #cc33ff;
-}
-#black {
-	fill: #444444;
-}
+
 
 /* ---------------- LAYOUT ---------------*/
 .wrapper{ 
