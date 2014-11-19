@@ -86,6 +86,7 @@ function init() {
 		e.preventDefault();
 		showhide('p5can');
 		showhide('content');
+		showhide('back');
 		start = true;
 	} );
 	
@@ -151,7 +152,7 @@ function Needle(){
 
   this.move = function() {
   	this.xLoc += (nWidth/2+yWidth);
-  	if (this.xLoc >= (width - nWidth)) {
+  	if (this.xLoc >= (width - 50)) {
   		this.xLoc = 50;
   		this.yLoc += (nWidth/2+yWidth);
   	}  	

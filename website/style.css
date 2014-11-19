@@ -63,43 +63,63 @@ table {
 	transition: all 0.3s;
 }
 
-/* ---------------- TYPOGRAPHY ---------------*/
+/* ---------------- STYLES ---------------*/
 @font-face {
 	font-family:Monoxil;
 	src: url(Monoxil_Regular.otf) format('otf');
 }
 
+.wrapper{ 
+	margin: 0 auto;
+	max-width: 960px;
+	padding: 2%;
+}
+.content {
+	margin: 0 auto;
+	width: 80%;
+}
 body {
 	font-family: 'Lato', Helvetica, Arial, sans-serif;
+	text-align: center;
+	color: #242424;
+}
+header {
+	padding-top: 1rem;
 }
 h1 {
 	font-family: Monoxil, monospace;
 	font-size: 10vw;
 	text-align: center;
-}
-h2 {
-	font-family: Monoxil, monospace;
-	font-size: 1.5rem;
-}
-#button {
-	font-family: Monoxil, monospace;
-	font-size: 1.5rem;
-}
-
-/* ---------------- COLOR ---------------*/
-body { 
-	color: #242424;
-}
-h1 {
 	color: #cc33ff;
 }
 h2 {
+	font-family: Monoxil, monospace;
+	font-size: 1.5rem;
+	text-align: left;
 	color: #9933ff;
+}
+a {
+	color: #0066ff;
+}
+.menu{
+	margin: 0 auto;
+	width: 100%;
+	padding: 1rem 0;
+	float: left;
+}
+li{
+	float:left;
+	display:block;
+	width: 16.6666666666%;
+	padding: 0 0 1rem 0;
 }
 .menu p { 
 	color: #0066ff;
 }
 svg {
+	padding: 1rem 0 .5rem 0;
+	margin: 0;
+	height: 150px;
 	fill: #33ccff;
 }
 .needle:hover > svg {
@@ -114,60 +134,36 @@ svg {
 .yarn:hover > p {
 	color: #ff33cc;
 }
+.color svg {
+	width: 94%;
+}
 #button {
+	padding: 1.5rem 3rem;
+	margin: 1rem 0 2.5rem 0;
+	font-family: Monoxil, monospace;
+	font-size: 1.5rem;
 	background-color: #cc33ff;
 	color: #ffffff;
 }
 #button:hover {
 	background-color: #ff6666;
 }
-
-
-
-/* ---------------- LAYOUT ---------------*/
-.wrapper{ 
-	margin: 0 auto;
-	max-width: 960px;
-	padding: 2%;
-
-}
-header {
-	padding-top: 1rem;
-}
-.content {
-	margin: 0 auto;
-	width: 80%;
-}
-.menu{
-	margin: 0 auto;
-	width: 100%;
-	padding: 1rem 0;
-	float: left;
-}
-li{
-	float:left;
-	display:block;
-	width: 16.6666666666%;
-	padding: 0 0 1rem 0;
-}
-svg { 
-	padding: 1rem 0 .5rem 0;
-	margin: 0;
-	height: 150px;
-}
-.color svg {
-	width: 94%;
-}
-#button {
-	padding: 1.5rem 3rem;
-	margin: 1.5rem 0 2.5rem 0;
-}
 #p5can {
 	margin: 0 auto;
 	display: none;
 }
+#back {
+	font-size: 1.25rem;
+	text-align: center;
+	display: none;
+}
+.instructions{
+	text-align: left;
+	padding: .5rem 0;
+}
 
-/* ---------------- Media queries ---------------*/
+
+/* ---------------- Media Queries ---------------*/
 
 @media screen and (min-width: 800px){
 	h1{
@@ -181,4 +177,8 @@ svg {
 	li{
 		font-size: .9rem;
 	}
+	.color svg{
+		height: 4rem;
+	}ß
 }
+
