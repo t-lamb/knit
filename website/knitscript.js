@@ -1,7 +1,7 @@
 //global variables set to hide
 var yWidth = 0;
 var nWidth = 0;
-var yColor = 255;
+var yColor = 0;
 var start = false; //p5 draw
 
 function init() {
@@ -82,10 +82,25 @@ function init() {
 //BUTTON
 
 	//clicking button triggers canvas
-	var button = document.getElementById('button').addEventListener('click', function(e) {
+	var button = document.getElementById('button').addEventListener('click', function(e){
 		e.preventDefault();
-		start = true;	
-	});
+		showhide('p5can');
+		showhide('content');
+		start = true;
+	} );
+	
+	//show/hide divs by changing computed display value
+	function showhide(id) {
+		var div = document.getElementById(id);
+		var sty = getComputedStyle(div);
+		console.log(sty.display);
+		if (sty.display == 'none'){
+			console.log("woo");
+			div.style.display = 'block';
+		} else {
+			div.style.display = 'none';
+		}	
+	}
 
 }; //end init function
 
@@ -100,15 +115,16 @@ function hexToRgb(hex) {
     	} : null;
 };
 
+
 //P5
 
 var s; //stitch
-//var can; //canvas
+var can; //canvas
 
 function setup(){
-	createCanvas(1000, 600);
-	//can = createCanvas(1000, 600);
-	//can.parent('p5can');
+	//createCanvas(1000, 600);
+	can = createCanvas(windowWidth, windowHeight);
+	can.parent('p5can');
 	s = new Needle();
 	console.log(nWidth, yWidth, yColor);
 };

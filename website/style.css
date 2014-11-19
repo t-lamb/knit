@@ -162,6 +162,10 @@ svg {
 	padding: 1.5rem 3rem;
 	margin: 1.5rem 0 2.5rem 0;
 }
+#p5can {
+	margin: 0 auto;
+	display: none;
+}
 
 /* ---------------- Media queries ---------------*/
 
