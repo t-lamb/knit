@@ -9,7 +9,8 @@ function init() {
 	var needles = document.getElementsByClassName('needle');
 	var yarns = document.getElementsByClassName('yarn');
 	var colors = document.getElementsByClassName('color');
-
+	var stringIn = document.getElementsById('input').value;
+	
 //NEEDLES
 
 	//add event listeners to needles for interaction
@@ -79,6 +80,14 @@ function init() {
 		console.log(yColor);
 	};
 
+//TEXT INPUT
+	
+	//var stringIn = "a";
+	var stringOut = ABC.toBinary(stringIn);
+	for (var i = 0; i < stringOut.length; i++) {
+		console.log(stringOut[i]);
+	}
+
 //BUTTON
 
 	//clicking button triggers canvas
@@ -88,6 +97,8 @@ function init() {
 		showhide('content');
 		showhide('back');
 		start = true;
+		stringIn = document.getElementById('input').value;
+		console.log('stringIn');
 	} );
 	
 	//show/hide divs by changing computed display value
@@ -105,7 +116,7 @@ function init() {
 
 }; //end init function
 
-//Convert hex to rgb
+//convert hex to rgb
 
 function hexToRgb(hex) {
     var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
@@ -114,6 +125,24 @@ function hexToRgb(hex) {
         g: parseInt(result[2], 16),
         b: parseInt(result[3], 16)
     	} : null;
+};
+
+//convert ASCII to Binary
+var ABC = {
+  toAscii: function(bin) {
+    return bin.replace(/\s*[01]{8}\s*/g, function(bin) {
+      return String.fromCharCode(parseInt(bin, 2))
+    })
+  },
+  toBinary: function(str, spaceSeparatedOctets) {
+    return str.replace(/[\s\S]/g, function(str) {
+      str = ABC.zeroPad(str.charCodeAt().toString(2));
+      return !1 == spaceSeparatedOctets ? str : str + " "
+    })
+  },
+  zeroPad: function(num) {
+    return "00000000".slice(String(num).length) + num
+  }
 };
 
 
@@ -128,12 +157,22 @@ function setup(){
 	can.parent('p5can');
 	s = new Needle();
 	console.log(nWidth, yWidth, yColor);
+
 };
 
 function draw() {
-	if (start == true && s.yLoc < (height - nWidth)) {
-		s.k();
-		s.move();		
+	//starts loop and ends based on screen height
+	if (start == true){ // && s.yLoc < (height - nWidth)) {
+		for (var i = 0; i < stringOut.length; i++) {		
+			
+			if (stringOut[i] == 0){
+				s.k();
+			}
+			if (stringOut[i] == 1){
+				s.p();
+			}
+			s.move();
+		}		
 	}
 };
 
@@ -147,6 +186,14 @@ function Needle(){
     stroke(yColor.r, yColor.g, yColor.b, 100);
     strokeWeight(yWidth); 
     ellipse(this.xLoc, this.yLoc, nWidth, nWidth);
+    console.log(this.xLoc + " " + this.yLoc);
+  }
+
+  this.p = function(){
+  	noFill();
+    stroke(yColor.r, yColor.g, yColor.b, 100);
+    strokeWeight(yWidth); 
+    rect((this.xLoc - (nWidth/2)), (this.yLoc - (nWidth/2)), nWidth, nWidth);
     console.log(this.xLoc + " " + this.yLoc);
   }
 
