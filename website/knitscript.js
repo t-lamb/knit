@@ -10,7 +10,8 @@ function init() {
 	var needles = document.getElementsByClassName('needle');
 	var yarns = document.getElementsByClassName('yarn');
 	var colors = document.getElementsByClassName('color');
-	var stringIn = document.getElementById('input').value;
+	var stringIn = document.getElementById('input');
+	//console.log(stringIn);
 
 //NEEDLES
 
@@ -35,7 +36,7 @@ function init() {
 			nWidth = tag.ownerSVGElement.width.animVal.value;
 		}
 
-		console.log(nWidth);
+		//console.log(nWidth);
 
 	};
 
@@ -62,7 +63,7 @@ function init() {
 			yWidth = tag.ownerSVGElement.width.animVal.value;
 		}
 		
-		console.log(yWidth);
+		//console.log(yWidth);
 
 	};
 
@@ -78,7 +79,7 @@ function init() {
 		var tag = e.target;
 		var yColorhex = tag.attributes.fill.value;		
 		yColor = hexToRgb(yColorhex);
-		console.log(yColor);
+		//console.log(yColor);
 	};
 
 //TEXT INPUT
@@ -96,7 +97,7 @@ function init() {
 		showhide('p5can');
 		showhide('content');
 		showhide('back');
-		stringOut = ABC.toBinary(stringIn);
+		stringOut = ABC.toBinary(stringIn.value);
 		start = true;
 
 	} );
@@ -171,10 +172,7 @@ function draw() {
 			if (stringOut[i] == 1){
 				s.p();
 			}
-
-			s.move();
-			
-			
+			s.move();					
 		}
 		start = false;	
 	}
@@ -200,6 +198,7 @@ function Needle(){
     rect((this.xLoc - (nWidth/2)), (this.yLoc - (nWidth/2)), nWidth, nWidth);
     console.log(this.xLoc + " " + this.yLoc);
   }
+
 
   this.move = function() {
   	this.xLoc += (nWidth/2+yWidth);
