@@ -82,6 +82,10 @@ function init() {
 	};
 
 //TEXT INPUT
+	//cursor
+	var inbox = document.getElementById('input').addEventListener('focus', function(e){
+		showhide('cursor');
+	});
 	
 
 //BUTTON
@@ -96,6 +100,7 @@ function init() {
 		start = true;
 
 	} );
+
 	
 	//show/hide divs by changing computed display value
 	function showhide(id) {
@@ -156,7 +161,7 @@ function setup(){
 
 function draw() {
 	//starts loop and ends based on screen height
-	if (start == true && s.yLoc < (height - nWidth)) {
+	if (start == true) {
 	console.log(stringOut.length);
 		for (var i = 0; i < stringOut.length; i++) {		
 			
@@ -166,8 +171,12 @@ function draw() {
 			if (stringOut[i] == 1){
 				s.p();
 			}
+
 			s.move();
-		}		
+			
+			
+		}
+		start = false;	
 	}
 };
 

@@ -104,7 +104,7 @@ a {
 .menu{
 	margin: 0 auto;
 	width: 100%;
-	padding: 1rem 0;
+	padding: 0 0 2rem 0;
 	float: left;
 }
 li{
@@ -113,7 +113,7 @@ li{
 	width: 16.6666666666%;
 	padding: 0 0 1rem 0;
 }
-.menu p { 
+.label{ 
 	color: #0066ff;
 }
 svg {
@@ -137,6 +137,18 @@ svg {
 .color svg {
 	width: 94%;
 }
+#input {
+	outline: none;
+	border: none;
+	border-bottom: 2px solid #dddddd;
+	padding: 0 0 0.75rem 0;
+	margin: 1rem 0 1rem 0;
+	width: 50%;
+	min-width: 16rem;
+	float: left;
+	font-family:Monoxil;
+	font-size: 1.25rem;
+}
 #button {
 	padding: 1.5rem 3rem;
 	margin: 1rem 0 2.5rem 0;
@@ -159,9 +171,39 @@ svg {
 }
 .instructions{
 	text-align: left;
-	padding: .5rem 0;
+	padding: 0.5rem 0;
 }
 
+@keyframes blink
+{
+	0%   {  background: #9933ff;  }
+	100% {  background: #ffffff;}
+}
+
+@-webkit-keyframes blink {
+	0%   {  background: #9933ff;  }
+	100% {  background: #ffffff;  }
+}
+@-moz-keyframes blink {
+	0%   {  background: #9933ff;  }
+	100% {  background: #ffffff; }
+}
+
+.cursor {
+	background:#9933ff; 
+  	display: inline-block;
+  	width:1rem;
+  	height:1.5rem;
+  	margin: 1rem 0 0 0;
+  	float: left;
+
+    -webkit-animation-name: blink;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: blink;
+    -moz-animation-duration: 1.5s;
+    -moz-animation-iteration-count: infinite;
+}
 
 /* ---------------- Media Queries ---------------*/
 
@@ -179,6 +221,9 @@ svg {
 	}
 	.color svg{
 		height: 4rem;
-	}ß
+	}
+	#input{
+		width:100%;
+	}
 }
 

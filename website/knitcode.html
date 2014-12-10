@@ -12,7 +12,7 @@
 <body>
 <div id="wrapper">
 	<header>
-		<h1>Knit like me.</h1><div id="back"><a href="knitcode.html" class="instructions">&#8619; Knit something else! &#8619;</a></div>
+		<h1>Knit like me.</h1><div id="back"><a href="knitcode.html">&#8619; Knit something else! &#8619;</a></div>
 	</header>
 	
 	<div id="p5can">
@@ -32,7 +32,7 @@
 						<rect width="100" height="120"/>
 					</g>
 					</svg>
-					<p>0<br/>2mm</p><!--8px-->
+					<p class="label">0<br/>2mm</p><!--8px-->
 				</li>
 				<li class="needle">
 					<svg version="1.1" id="n3" x="0px" y="0px" width="13px" viewBox="0 0 13 150">
@@ -41,7 +41,7 @@
 						<rect width="100" height="120"/>
 					</g>
 					</svg>
-					<p>3<br/>3.25mm</p><!--13px-->
+					<p class="label">3<br/>3.25mm</p><!--13px-->
 				</li>
 				<li class="needle">
 					<svg version="1.1" id="n6" x="0px" y="0px" width="17px" viewBox="0 0 17 150">
@@ -50,7 +50,7 @@
 						<rect width="100" height="120"/>
 					</g>
 					</svg>
-					<p>6<br/>4mm</p><!--17px-->
+					<p class="label">6<br/>4mm</p><!--17px-->
 				</li>
 				<li class="needle">
 					<svg version="1.1" id="n9" x="0px" y="0px" width="23px" viewBox="0 0 23 150">
@@ -59,7 +59,7 @@
 						<rect width="100" height="120"/>
 					</g>
 					</svg>
-					<p>9<br/>5.5mm</p><!--23px-->
+					<p class="label">9<br/>5.5mm</p><!--23px-->
 				</li>
 				<li class="needle">
 					<svg version="1.1" id="n13" x="0px" y="0px" width="37px" viewBox="0 0 37 150">
@@ -68,7 +68,7 @@
 						<rect width="100" height="120"/>
 					</g>
 					</svg>
-					<p>13<br/>9mm</p><!--37px-->
+					<p class="label">13<br/>9mm</p><!--37px-->
 				</li>
 				<li class="needle">
 					<svg version="1.1" id="n17" x="0px" y="0px" width="51px" viewBox="0 0 51 150">
@@ -77,7 +77,7 @@
 						<rect width="100" height="120"/>
 					</g>
 					</svg>
-					<p>17<br/>12mm</p><!--51px-->
+					<p class="label">17<br/>12mm</p><!--51px-->
 				</li>
 			</ul>
 			<h2>&#125;</h2>
@@ -97,7 +97,7 @@
 						<polygon points="100,17.4 0,47.3 0,65.5 100,35.6 	"/>
 					</g>
 					</svg>
-					<p>Lace<br/>2ply</p><!--5px-->
+					<p class="label">Lace<br/>2ply</p><!--5px-->
 				</li>
 				<li class="yarn">
 					<svg version="1.1" id="y4" x="0px" y="0px" width="9px" viewBox="0 0 9 150">
@@ -110,7 +110,7 @@
 						<polygon points="100,17.4 0,47.3 0,65.5 100,35.6 	"/>
 					</g>
 					</svg>
-					<p>Fingering<br/>4ply</p><!--9px-->
+					<p class="label">Fingering<br/>4ply</p><!--9px-->
 				</li>
 				<li class="yarn">
 					<svg version="1.1" id="y5" x="0px" y="0px" width="12px" viewBox="0 0 12 150">
@@ -123,7 +123,7 @@
 						<polygon points="100,17.4 0,47.3 0,65.5 100,35.6 	"/>
 					</g>
 					</svg>
-					<p>Sport<br/>5ply</p><!--12px-->
+					<p class="label">Sport<br/>5ply</p><!--12px-->
 				</li>
 				<li class="yarn">
 					<svg version="1.1" id="y8" x="0px" y="0px" width="18px" viewBox="0 0 18 150">
@@ -136,7 +136,7 @@
 						<polygon points="100,17.4 0,47.3 0,65.5 100,35.6 	"/>
 					</g>
 					</svg>
-					<p>DK<br/>8ply</p><!--18px-->
+					<p class="label">DK<br/>8ply</p><!--18px-->
 				</li>
 				<li class="yarn">
 					<svg version="1.1" id="y10" x="0px" y="0px" width="24px" viewBox="0 0 24 150">
@@ -149,7 +149,7 @@
 						<polygon points="100,17.4 0,47.3 0,65.5 100,35.6 	"/>
 					</g>
 					</svg>
-					<p>Worsted<br/>10ply</p><!--24px-->
+					<p class="label">Worsted<br/>10ply</p><!--24px-->
 				</li>
 				<li class="yarn">
 					<svg version="1.1" id="y12" x="0px" y="0px" width="28px" viewBox="0 0 28 150">
@@ -162,7 +162,7 @@
 						<polygon points="100,17.4 0,47.3 0,65.5 100,35.6 	"/>
 					</g>
 					</svg>
-					<p>Bulky<br/>12ply</p><!--28px-->
+					<p class="label">Bulky<br/>12ply</p><!--28px-->
 				</li>
 			</ul>
 			<h2>&#125;</h2>
@@ -207,9 +207,17 @@
 			</ul>
 			<h2>&#125;</h2>
 		</div><!--close yarn menu-->
-		<div class="string">
-			<h2>type a short message to encode:</h2>
-			<input type="text" value=" " id="input">
+		
+		<p class="instructions">
+			//To make a pattern, you can encrypt a secret message
+		</p>
+
+		<div class="menu">
+			<h2>
+				Your message:
+			</h2>
+				<div class="cursor" id="cursor"> </div>
+				<input type="text" value=" " id="input">
 		</div><!--close string-->
 
 		<a href="#" id="button">Knit Something!</a>
