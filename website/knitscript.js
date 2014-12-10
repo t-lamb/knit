@@ -3,14 +3,15 @@ var yWidth = 0;
 var nWidth = 0;
 var yColor = 0;
 var start = false; //p5 draw
+var stringOut;
 
 function init() {
 	//create arrays for knitting options
 	var needles = document.getElementsByClassName('needle');
 	var yarns = document.getElementsByClassName('yarn');
 	var colors = document.getElementsByClassName('color');
-	var stringIn = document.getElementsById('input').value;
-	
+	var stringIn = document.getElementById('input').value;
+
 //NEEDLES
 
 	//add event listeners to needles for interaction
@@ -82,11 +83,6 @@ function init() {
 
 //TEXT INPUT
 	
-	//var stringIn = "a";
-	var stringOut = ABC.toBinary(stringIn);
-	for (var i = 0; i < stringOut.length; i++) {
-		console.log(stringOut[i]);
-	}
 
 //BUTTON
 
@@ -96,18 +92,16 @@ function init() {
 		showhide('p5can');
 		showhide('content');
 		showhide('back');
+		stringOut = ABC.toBinary(stringIn);
 		start = true;
-		stringIn = document.getElementById('input').value;
-		console.log('stringIn');
+
 	} );
 	
 	//show/hide divs by changing computed display value
 	function showhide(id) {
 		var div = document.getElementById(id);
 		var sty = getComputedStyle(div);
-		console.log(sty.display);
 		if (sty.display == 'none'){
-			console.log("woo");
 			div.style.display = 'block';
 		} else {
 			div.style.display = 'none';
@@ -162,7 +156,8 @@ function setup(){
 
 function draw() {
 	//starts loop and ends based on screen height
-	if (start == true){ // && s.yLoc < (height - nWidth)) {
+	if (start == true && s.yLoc < (height - nWidth)) {
+	console.log(stringOut.length);
 		for (var i = 0; i < stringOut.length; i++) {		
 			
 			if (stringOut[i] == 0){
